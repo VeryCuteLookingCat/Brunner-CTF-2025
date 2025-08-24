@@ -1,7 +1,7 @@
 # Timing Is Everything
 This challenge presented you with a 'timing.elf', this elf file prompted you for a 'key'. If you provided the wrong key It would just respond with 'Wrong Key.'
 I don't primarily use linux so I did all of the reverse engineering on windows, The first thing I did was I plugged the program into Detect It Easy. Detect it Easy tells you all the characteristics of a program and lets you view the static strings.
-
+![Detect It Easy](https://github.com/VeryCuteLookingCat/Brunner-CTF-2025/blob/main/RE-Timing-Is-Everything/step_1.png)
 I saw all of the python declerations and the string 'Py_DecRef' stood out to me. I assumed that this was a python program compiled into an executable. I used a tool called 'pyinstxtractor' (https://github.com/extremecoders-re/pyinstxtractor) to extract out the python bytecode. I was presented with a bunch of files but I could tell 'chall.pyc' was where all of the code was. I used PyLingual(https://pylingual.io/) to get the original python code. What I got was this:
 ```py
 
