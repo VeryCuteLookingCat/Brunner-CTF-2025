@@ -230,7 +230,7 @@ setmetatable(testTable, {
 -- right
 setmetatable(testTable, {
     __index = function(index) 
-        return rawget(testTable, index)-- would cause recursion
+        return rawget(testTable, index)-- would not cause recursion
     end
 })
 ```
